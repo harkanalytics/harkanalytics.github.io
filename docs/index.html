@@ -28,14 +28,18 @@
 
 <div class="contact-section">
     <p>Contact us at: harkanalytics@gmail.com</p>
-    <form action="YOUR_FORM_ACTION" method="post">
-        <input type="text" id="first_name" name="first_name" placeholder="First Name">
-        <input type="text" id="last_name" name="last_name" placeholder="Last Name">
-        <input type="email" id="email" name="email" placeholder="Email Address">
-        <textarea id="message" name="message" placeholder="Your Message"></textarea>
+    <form action="https://formspree.io/f/mwkgqzzq" method="POST">
+        <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+        <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+        <input type="email" id="email" name="_replyto" placeholder="Email Address" required>
+        <!-- The _replyto name is a special Formspree field used to specify the reply-to address -->
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+        <!-- Hidden field to include email in the message body -->
+        <input type="hidden" name="_subject" value="New submission from HARK Analytics Website!">
         <button type="submit">Send</button>
     </form>
 </div>
+
 
 <script src="script.js"></script>
 </body>
