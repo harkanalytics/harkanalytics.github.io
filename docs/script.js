@@ -1,13 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var myVideo = document.getElementById('myVideo');
+// Example of smooth scrolling for anchor links - expand as needed
 
-    window.addEventListener('scroll', function() {
-        var videoPosition = myVideo.getBoundingClientRect();
-        if (videoPosition.top >= 0 && videoPosition.bottom <= window.innerHeight) {
-            myVideo.play();
-        } else {
-            myVideo.pause();
-        }
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
-
