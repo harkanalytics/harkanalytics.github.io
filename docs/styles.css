@@ -63,10 +63,30 @@ form input, form textarea {
     max-width: 400px;
 }
 
+/* General link hover effect */
+a {
+    transition: color 0.3s ease; /* Smooth transition for color change */
+    color: #000; /* Default link color */
+}
+
+a:hover {
+    color: #007bff; /* Change color on hover */
+    text-decoration: none; /* Optional: remove underline on hover */
+}
+
+/* Enhancing button hover effect */
 form button {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
     cursor: pointer;
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+form button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
 
