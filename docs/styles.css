@@ -13,9 +13,18 @@ body, html {
     font-size: 36px;
 }
 
+.header-image-crop {
+    height: 400px; /* Set to 50% of the original image height */
+    overflow: hidden; /* Hide the parts of the image that overflow the container */
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
 .header-image {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Keep the original width */
+    object-fit: cover; /* Cover the container without distorting the aspect ratio */
+    object-position: center; /* Center the image within the container to focus on the middle */
 }
 
 .overlay-text {
