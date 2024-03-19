@@ -14,11 +14,12 @@ body, html {
 }
 
 .header-image-crop {
-    height: 400px; /* Set to 50% of the original image height */
-    overflow: hidden; /* Hide the parts of the image that overflow the container */
-    display: flex; /* Use flexbox to center the image */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure this container is positioned to act as a reference for absolute positioning */
 }
 
 .header-image {
@@ -33,6 +34,9 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2em;
+    color: white; /* Assuming you want the text in white to stand out against the background image */
+    width: 100%; /* Ensures text alignment is responsive within the container */
+    text-align: center; /* Centers the text horizontally */
 }
 
 .video-section {
